@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="resume-builder">
+        <!-- Form Section -->
+        <div id="form-section">
+            <h1>Dynamic Resume Builder</h1>
+            <div class="form-group">
+                <label for="profile-picture">Upload Profile Picture:</label>
+                <input type="file" id="profile-picture" accept="image/*" onchange="previewImage(event)">
+                <img id="profile-picture-preview" alt="Profile Picture" style="display: none;">
+            </div>
+            <div class="form-group">
+                <label>Full Name:</label>
+                <input type="text" id="full-name" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label>Role (e.g., Python Developer):</label>
+                <input type="text" id="role" placeholder="Your Role">
+            </div>
+            <div class="form-group">
+                <label>Contact Information:</label>
+                <input type="text" id="phone" placeholder="Phone">
+                <input type="email" id="email" placeholder="Email">
+                <textarea id="address" placeholder="Address"></textarea>
+            </div>
+            <div class="form-group">
+                <label>About Me:</label>
+                <textarea id="about-me" placeholder="Write a brief about yourself..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>Job Experience:</label>
+                <button onclick="addExperience()">Add Job Experience</button>
+                <div id="experience-container"></div>
+            </div>
+            <div class="form-group">
+                <label>Education:</label>
+                <button onclick="addEducation()">Add Education</button>
+                <div id="education-container"></div>
+            </div>
+            <div class="form-group">
+                <label>Skills:</label>
+                <input type="text" id="skill-input" placeholder="Add a skill">
+                <button onclick="addSkill()">Add Skill</button>
+                <div id="skills-container"></div>
+            </div>
+            <button onclick="generateResume()">Generate Resume</button>
+        </div>
+
+        <!-- Resume Preview -->
+        <div id="resume-preview" style="display: none;">
+            <div id="resume-left">
+                <img id="resume-profile-picture" alt="Profile Picture" style="display: none;">
+                <div id="resume-contact"></div>
+                <div id="resume-education"></div>
+            </div>
+            <div id="resume-right">
+                <h1 id="resume-name"></h1>
+                <h3 id="resume-role"></h3>
+                <div id="resume-about"></div>
+                <div id="resume-experience"></div>
+                <div id="resume-skills"></div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button id="back-button" style="display: none;" onclick="goBack()">Back</button>
+        <button id="print-button" style="display: none;" onclick="printResume()">Print Resume</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

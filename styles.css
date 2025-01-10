@@ -1,0 +1,105 @@
+/* Global Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgb(214, 107, 13);
+}
+
+/* Container */
+#resume-builder {
+    max-width: 1000px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    width: auto;
+    padding: 5px 10px;
+    font-size: 14px;
+    background: rgb(214, 107, 13);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Resume Preview Styling */
+#resume-preview {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+#resume-left {
+    width: 30%;
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#resume-left img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+#resume-right {
+    width: 70%;
+    padding: 20px;
+}
+
+.skill {
+    display: inline-block;
+    background: #ffcc00;
+    color: #333;
+    padding: 5px 10px;
+    margin: 5px 5px 0 0;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* Navigation Buttons */
+#back-button, #print-button {
+    margin-top: 10px;
+    margin-right: 10px;
+}
